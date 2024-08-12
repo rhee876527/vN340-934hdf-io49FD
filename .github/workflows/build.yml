@@ -11,15 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-  
-  workflow-keepalive:
-    if: github.event_name == 'schedule'
-    runs-on: ubuntu-latest
-    permissions:
-      actions: write
-    steps:
-      - uses: liskin/gh-workflow-keepalive@v1
- 
+        
       - name: Create
         id: create
         run: |
@@ -66,3 +58,12 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Bump update.json to ${{ steps.create.outputs.VERSION }}
+
+  keepalive-job:
+    name: Keepalive Workflow
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
