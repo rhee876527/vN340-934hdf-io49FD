@@ -1,9 +1,9 @@
 id=fdroid-priv-ext
 name=F-Droid Privileged Extension
-version=20241026
-versionCode=20241026
+version=20241207
+versionCode=20241207
 author=rhee876527
 description=F-Droid Privileged Extension module for Magisk
 updateJson=https://raw.githubusercontent.com/rhee876527/vN340-934hdf-io49FD/master/update.json
 fpeOtaVersionCode=2130
-fdroidVersionCode=1020051
+fdroidVersionCode=1021051
